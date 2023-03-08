@@ -115,7 +115,8 @@ function buildCharts(sample) {
       title: "Attempt at bar chart",
       margin: {
         l: 75,
-        t: 100,
+        w: 50,
+        t: 125,
       }
     };
     // Deliverable 1: 10. Use Plotly to plot the data with the layout. 
@@ -155,48 +156,38 @@ function buildCharts(sample) {
 
     // // Deliverable 3: 4. Create the trace for the gauge chart.
     var traceGauge = [{
-      domain: { x: [0, 10], y: [0, 2] },
+      domain: { x: [0, 1], y: [0, 1] },
       value: wash,
       title: { text: "Speed" },
       type: "indicator",
-      mode: "gauge+number"
-      // gauge: {
-      //   'axis': { range: [null, 10] }}
-    // //     steps: [
-    //       { range: [0, 2], color: "red" },
-    //       { range: [2, 4], color: "orange" },
-    //       { range: [4, 6], color: "yellow" },
-    //       { range: [6, 8], color: "lightgreen" },
-    //       { range: [8, 10], color: "green" }
-    //     ]
-    //     // bar: { color: "darkblue" }
-    // //     threshold: {
-    // //       line: { color: "red", width: 4 },
-    // //       // thickness: 0.75,
-    // //       value: 10
-    // //     }
-    //  }
+      mode: "gauge+number",
+      gauge: {
+        axis: { range: [0, 10], tickwidth: 2 },
+        steps: [
+          { range: [0, 2], color: "red" },
+          { range: [2, 4], color: "orange" },
+          { range: [4, 6], color: "yellow" },
+          { range: [6, 8], color: "lightgreen" },
+          { range: [8, 10], color: "green" }
+        ],
+        bar: { color: "darkblue" },
+        threshold: {
+          line: { color: "red", width: 4 },
+          thickness: 0.75,
+          value: 10
+        }
+     }
     }];
 
-    // var traceGuage = [
-    //   {
-    //     domain: { x: [0, 1], y: [0, 1] },
-    //     value: wash,
-    //     title: { text: "Speed" },
-    //     type: "indicator",
-    //     mode: "gauge+number"
-    //   }
-    // ];
-
-
-    // Deliverable 3: 5. Create the layout for the gauge chart.
+       // Deliverable 3: 5. Create the layout for the gauge chart.
     var guageLayout = {
-      height: 300,
-      width: 300,
+      height: 400,
+      width: 450,
       title: "Belly Button Washing Frequency",
+      xaxis: {range: [0, 2]},
       margin: {
-        l: 100,
-        t: 50,
+        l: 5,
+        t: 125,
       }
 
     };
