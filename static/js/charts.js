@@ -112,7 +112,8 @@ function buildCharts(sample) {
 
     // // Deliverable 1: 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "Attempt at bar chart",
+      title: "Top 10 Bacteria Cultures Found",
+      color: "red",
       margin: {
         l: 75,
         w: 50,
@@ -132,10 +133,12 @@ function buildCharts(sample) {
       y: sample_values,
       text: otu_labels,
       mode: 'markers',
+     
       marker: {
         size: sample_values,
         color: (otu_ids),
-        colorscale: ('Earth')
+        colorscale: ('Earth'),
+        opacity: (500)
       },
     }];
 
@@ -145,8 +148,8 @@ function buildCharts(sample) {
       height: 550,
       width: 1000,
       hovermode: 'closest',
-      text: otu_ids
-
+      text: otu_ids,
+     
     };
     // Deliverable 2: 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble", traceBubble, bubbleLayout);
@@ -158,7 +161,7 @@ function buildCharts(sample) {
     var traceGauge = [{
       domain: { x: [0, 1], y: [0, 1] },
       value: wash,
-      title: { text: "Speed" },
+      title: { text: "Scrubs per Week" },
       type: "indicator",
       mode: "gauge+number",
       gauge: {
@@ -171,23 +174,23 @@ function buildCharts(sample) {
           { range: [8, 10], color: "green" }
         ],
         bar: { color: "darkblue" },
-        threshold: {
-          line: { color: "red", width: 4 },
-          thickness: 0.75,
-          value: 10
-        }
+        // threshold: {
+        //   line: { color: "red", width: 4 },
+        //   thickness: 0.75,
+        //   value: 10
+        // }
      }
     }];
 
        // Deliverable 3: 5. Create the layout for the gauge chart.
     var guageLayout = {
       height: 400,
-      width: 450,
+      width: 400,
       title: "Belly Button Washing Frequency",
       xaxis: {range: [0, 2]},
       margin: {
-        l: 5,
-        t: 125,
+        l: 10,
+        t: 140,
       }
 
     };
