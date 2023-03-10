@@ -1,26 +1,26 @@
 /* body { 
     color: #f7f7f7;
  } */
-
+ 
 
 .jumbotron {
-    background-image: url("../resources/Belly1.jpg");
+    background-image: url("../resources/bacteriablue2.png");
     background-size: 100% 100%;
     text-align: center;
     opacity: .88;
-    color: #0f12b9;
+    color: #dcdbdf;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #5354b6;
+    background-color: #252a5f;
     overflow: hidden;
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #dcdbdf;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -36,5 +36,5 @@
   /* Add a color to the active/current link */
   .topnav a.active {
     background-color: #04AA6D;
-    color: white;
+    color: #dcdbdf;;
   }
